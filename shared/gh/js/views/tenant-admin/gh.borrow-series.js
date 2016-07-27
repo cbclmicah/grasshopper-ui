@@ -76,12 +76,12 @@ define(['gh.core', 'gh.constants', 'gh.api.orgunit'], function(gh, constants, or
         var parts = _.filter(triposData.parts, function(part) {
             return parseInt(data.selected, 10) === part.ParentId;
         });
-
+   
         // Render the results in the part picker
+        // CHANGE: me: removed 'excludePart': History.getState().data.part
         gh.utils.renderTemplate('subheader-part', {
             'data': {
-                'parts': parts,
-                'excludePart': History.getState().data.part
+                'parts': parts
             }
         }, $('#gh-borrow-series-part'), function() {
             // Show the subheader part picker
@@ -231,7 +231,8 @@ define(['gh.core', 'gh.constants', 'gh.api.orgunit'], function(gh, constants, or
     var addBinding = function() {
         $('body').on('click', '.gh-borrow-series', showBorrowSeriesModal);
         $('body').on('shown.bs.modal', '#gh-borrow-series-modal', function () {
-            $('#gh-borrow-series-tripos option + option').onAvailable(function() {
+        // me: was option + option
+            $('#gh-borrow-series-tripos optgroup>option').onAvailable(function() {
                 // Show the subheader tripos picker
                 $('#gh-borrow-series-tripos').show();
 
