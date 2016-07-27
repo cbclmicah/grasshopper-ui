@@ -75,8 +75,8 @@ before_install:
 
   # Install Grasshopper
   - echo 'Installing Grasshopper'
-  - cd ~/build/CUL-DigitalServices
-  - git clone --branch master --depth=1 git://github.com/CUL-DigitalServices/grasshopper.git ./grasshopper
+  - cd ~/build/cbclmicah
+  - git clone --branch master --depth=1 git://github.com/cbclmicah/grasshopper.git ./grasshopper
   - cd ./grasshopper
   - npm install
 
@@ -88,7 +88,7 @@ before_install:
 
   # Install Grasshopper UI
   - echo 'Installing Grasshopper UI'
-  - cd ~/build/CUL-DigitalServices/grasshopper-ui
+  - cd ~/build/cbclmicah/grasshopper-ui
   - npm install
   - grunt configApache
   - sudo cp ./target/optimized/apache/httpd.conf /usr/local/apache2/conf/httpd.conf
