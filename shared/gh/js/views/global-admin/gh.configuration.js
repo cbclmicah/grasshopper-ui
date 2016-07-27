@@ -61,7 +61,8 @@ define(['gh.core', 'gh.constants'], function(gh, constants) {
         // Update the configuration
         gh.api.configAPI.updateConfig($form.data('appid'), configValues, function(err) {
             if (err) {
-                return gh.utils.notification('System configuration not updated', constants.messaging.default.error, 'error');
+                var msg = (err.msg === undefined)?constants.messaging.default.error : err.msg;
+                return gh.utils.notification('System configuration not updated', msg, 'error');
             }
             return gh.utils.notification('System configuration updated', null, 'success');
         });
