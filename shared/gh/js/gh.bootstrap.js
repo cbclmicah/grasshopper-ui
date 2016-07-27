@@ -98,6 +98,7 @@ requirejs.config({
         'gh.admin.visibility': 'gh/js/views/tenant-admin/gh.visibility',
 
         // GH student view controllers
+        'gh.student.lecture-view': 'gh/js/views/tenant-student/gh.lectureview',
         'gh.student.agenda-view': 'gh/js/views/tenant-student/gh.agendaview',
         'gh.student.listview': 'gh/js/views/tenant-student/gh.listview',
         'gh.student.login-modal': 'gh/js/views/tenant-student/gh.login-modal',

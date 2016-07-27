@@ -189,6 +189,40 @@ define(['exports'], function(exports) {
             }
         });
     };
+	
+	/**
+     * Get the calendar for a lecturer
+     *
+     * @param  {Number}      userId               The ID of the user to get the calendar for
+     * @param  {String}      start                The timestamp (ISO 8601) from which to get the calendar for the user
+     * @param  {String}      end                  The timestamp (ISO 8601) until which to get the calendar for the user
+     * @param  {Function}    callback             Standard callback function
+     * @param  {Object}      callback.err         Error object containing the error code and error message
+     * @param  {Object}      callback.response    The requested user calendar
+     * @throws {Error}                            A parameter validation error
+     */
+    var getLecturerCalendarCalendar = exports.getLecturerCalendar = function(userId, start, end, callback) {
+        if (!_.isFunction(callback)) {
+            throw new Error('A callback function should be provided');
+        } else if (!_.isNumber(userId)) {
+            return callback({'code': 400, 'msg': 'A valid user id should be provided'});
+        } else if (!_.isString(start)) {
+            return callback({'code': 400, 'msg': 'A valid value for start should be provided'});
+        } else  if (!_.isString(end)) {
+            return callback({'code': 400, 'msg': 'A valid value for end should be provided'});
+        }
+
+        $.ajax({
+            'url': '/api/users/' + userId + '/lecturercalendar?start=' + encodeURIComponent(start) + '&end=' + encodeURIComponent(end),
+            'type': 'GET',
+            'success': function(data) {
+                return callback(null, data);
+            },
+            'error': function(jqXHR, textStatus) {
+                return callback({'code': jqXHR.status, 'msg': jqXHR.responseText});
+            }
+        });
+    };
 
     /**
      * Get the calendar for a user in iCal

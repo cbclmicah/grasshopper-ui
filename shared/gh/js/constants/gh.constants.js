@@ -72,6 +72,7 @@ define(['exports'], function(exports) {
         'admin-visibility-modal': '/shared/gh/partials/tenant-admin/admin-visibility-modal.html',
 
         // GH student views
+        'lecturer-agenda-view': '/shared/gh/partials/tenant-student/lecturer-agenda-view.html',
         'student-agenda-view': '/shared/gh/partials/tenant-student/student-agenda-view.html',
         'student-empty-timetable': '/shared/gh/partials/tenant-student/student-empty-timetable.html',
         'student-module-disabled-popover': '/shared/gh/partials/tenant-student/student-module-disabled-popover.html',

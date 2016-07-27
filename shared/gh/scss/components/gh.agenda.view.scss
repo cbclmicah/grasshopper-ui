@@ -18,11 +18,13 @@
 /* AGENDA VIEW */
 /***************/
 
-#gh-my-agenda-view-container {
+#gh-my-agenda-view-container,
+#gh-my-lecture-view-container {
 
     /* Term */
 
-    .agenda-view-term {
+    .agenda-view-term,
+    .lecture-view-term {
         margin: 0 30px;
 
         &:first-child {
@@ -33,7 +35,8 @@
             margin: 0 30px 25px;
         }
 
-        .agenda-view-term-header {
+        .agenda-view-term-header,
+		.lecture-view-term-header {
             border-bottom-style: solid;
             border-bottom-width: 5px;
             padding: 12px 12px 7px;
@@ -53,11 +56,13 @@
 
         /* Events */
 
-        .agenda-view-term-events {
+        .agenda-view-term-events,
+        .lecture-view-term-events		{
 
             /* Week */
 
-            .gh-agenda-view-term-week {
+            .gh-agenda-view-term-week,
+            .gh-lecture-view-term-week 			{
                 border-bottom-style: solid;
                 border-bottom-width: 3px;
                 font-weight: 400;
@@ -82,14 +87,16 @@
                     margin: 15px 0 12px;
                 }
 
-                .gh-agenda-view-no-events {
+                .gh-agenda-view-no-events,
+                .gh-lecture-view-no-events				{
                     padding: 20px;
                     text-align: center;
                 }
 
                 /* Event */
 
-                .gh-agenda-view-term-event {
+                .gh-agenda-view-term-event,
+                .gh-lecture-view-term-event				{
                     border-bottom-style: solid;
                     border-bottom-width: 1px;
                     overflow: hidden;
@@ -102,7 +109,8 @@
                         width: 50px;
                     }
 
-                    .gh-agenda-view-event-information {
+                    .gh-agenda-view-event-information,
+                    .gh-lecture-view-event-information					{
                         margin-left: 65px;
                         overflow: auto;
                         padding: 12px 12px 12px 0;
@@ -115,7 +123,8 @@
                             width: 100px;
                         }
 
-                        .gh-agenda-view-middot {
+                        .gh-agenda-view-middot,
+                        .gh-lecture-view-middot						{
                             font-size: 30px;
                             line-height: 0;
                             margin: 0 3px;
@@ -123,7 +132,9 @@
                         }
                     }
 
-                    &.gh-agenda-view-today .gh-agenda-view-event-information {
+                    &.gh-agenda-view-today .gh-agenda-view-event-information,
+                    &.gh-lecture-view-today .gh-lecture-view-event-information
+					{
                         border-bottom-style: solid;
                         border-bottom-width: 1px;
                     }
@@ -135,12 +146,17 @@
                     .gh-agenda-view-event-time,
                     .gh-agenda-view-event-location,
                     .gh-agenda-view-event-organisers,
-                    .gh-agenda-view-event-belongs {
+                    .gh-agenda-view-event-belongs,
+                    .gh-lecture-view-event-time,
+                    .gh-lecture-view-event-location,
+                    .gh-lecture-view-event-organisers,
+                    .gh-lecture-view-event-belongs					{
                         font-size: 14px;
                     }
                 }
 
-                .gh-agenda-view-term-event::after {
+                .gh-agenda-view-term-event::after,
+                .gh-lecture-view-term-event::after				{
                     content: '';
                     display: block;
                     clear: both;
@@ -150,6 +166,14 @@
                 .gh-agenda-view-term-event .gh-agenda-view-event-information:last-child,
                 .gh-agenda-view-term-event.gh-agenda-view-today:last-child,
                 .gh-agenda-view-term-event.gh-agenda-view-today .gh-agenda-view-event-information:last-child {
+                    border-bottom: none;
+                    padding-bottom: 5px !important;
+                }
+				
+				div.gh-lecture-view-term-event:last-of-type,
+                .gh-lecture-view-term-event .gh-lecture-view-event-information:last-child,
+                .gh-lecture-view-term-event.gh-lecture-view-today:last-child,
+                .gh-lecture-view-term-event.gh-lecture-view-today .gh-lecture-view-event-information:last-child {
                     border-bottom: none;
                     padding-bottom: 5px !important;
                 }

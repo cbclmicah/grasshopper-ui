@@ -18,6 +18,7 @@
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#gh-my-calendar-view" aria-controls="gh-my-calendar-view" role="tab" data-toggle="tab">My calendar</a></li>
                     <li role="presentation"><a href="#gh-my-agenda-view" aria-controls="gh-my-agenda-view" role="tab" data-toggle="tab">My agenda</a></li>
+                    <li role="presentation"><a href="#gh-my-lecture-view" aria-controls="gh-my-lecture-view" role="tab" data-toggle="tab">My lectures</a></li>
                 </ul>
             </div>
         </div>
@@ -96,6 +97,15 @@
             <!-- Agenda view template -->
             <script id="gh-my-agenda-view-template" type="text/template">
                 <%= _.partial('student-agenda-view', {'data': data}, false) %>
+            </script>
+        </div>
+
+        <div id="gh-my-lecture-view" class="tab-pane" role="tabpanel">
+            <div id="gh-my-lecture-view-container"><!-- --></div>
+
+            <!-- Agenda view template -->
+            <script id="gh-my-lecture-view-template" type="text/template">
+                <%= _.partial('lecturer-agenda-view', {'data': data}, false) %>
             </script>
         </div>
     </div>
