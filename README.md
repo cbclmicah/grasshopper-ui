@@ -6,7 +6,7 @@ A container for grasshopper applications
 [![Build Status](https://travis-ci.org/cbclmicah/grasshopper-ui.svg)](https://travis-ci.org/cbclmicah/grasshopper-ui)
 
 ## Dependencies
-[![Dependency Status](https://david-dm.org/fronteerio/grasshopper-ui.svg)](https://david-dm.org/fronteerio/grasshopper-ui)
+[![Dependency Status](https://david-dm.org/cbclmicah/grasshopper-ui.svg)](https://david-dm.org/cbclmicah/grasshopper-ui)
 [![devDependency Status](https://david-dm.org/fronteerio/grasshopper-ui/dev-status.svg)](https://david-dm.org/fronteerio/grasshopper-ui#info=devDependencies)
 
 ## Installation
