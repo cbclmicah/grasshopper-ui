@@ -1410,7 +1410,7 @@ require(['gh.core', 'moment', 'gh.api.orgunit', 'gh.api.tests'], function(gh, mo
             assert.ok(!err, 'Verify that the tripos structure can be requested without errors');
 
             // Get a part by its id
-            var part = gh.utils.getPartById(7);
+            var part = gh.utils.getPartById(3);
             assert.ok(part);
             assert.ok(part.id);
             assert.ok(part.GroupId);
